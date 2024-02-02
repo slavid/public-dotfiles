@@ -1,0 +1,6 @@
+#/bin/bash
+if [[ $(xclip -selection c -o) =~ https:\/\/www.youtube.com.* ]] || [[ $(xclip -selection c -o) =~ https:\/\/youtu.be.* ]]; then 
+	mpv $(xclip -selection c -o)
+#else
+#	echo "Not valid URL";
+fi
