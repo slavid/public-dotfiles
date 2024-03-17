@@ -20,9 +20,9 @@ set-psreadlineoption -bellstyle none
 
 ## eza
 
-function ezall { eza -lagMh --group-directories-first --icons=always --git --git-repos };
+function ezall { param($Path=".\") eza -lagMh --group-directories-first --icons=always --git --git-repos --time-style='+%d/%m/%Y %H:%M' $Path }
 
-#Set-Alias -Name ll -Value 'eza -lagMh --group-directories-first --icons=always --git --git-repos'
+#Set-Alias -Name ll -Value 'eza -lagMh --group-directories-first --icons=always --git --git-repos --time-style="+%d/%m/%Y %H:%M"'
 Set-Alias -Name ll -Value ezall
 
 ## Alias Kubernetes
